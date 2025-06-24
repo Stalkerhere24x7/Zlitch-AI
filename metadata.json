@@ -1,0 +1,6 @@
+{
+  "name": "Zlitch Agentic AI Platform",
+  "description": "A conceptual platform simulating agentic AI collaboration, powered by Google Gemini. Users can interact with a central AI coordinator, Nexus Core, which can delegate tasks to specialized AI agents.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

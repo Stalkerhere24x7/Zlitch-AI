@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zlitch Agent Development Kit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --theme-bg-primary: #0D0D0D; /* Near black for main backgrounds */
+      --theme-bg-secondary: #1A1A1A; /* Dark gray for secondary elements, cards */
+      --theme-bg-tertiary: #2C2C2C; /* Slightly lighter gray for elevated elements */
+      --theme-text-primary: #F5F5F5; /* Bright white/off-white for primary text */
+      --theme-text-secondary: #A0A0A0; /* Medium gray for secondary text */
+      --theme-text-tertiary: #6B6B6B; /* Darker gray for subtle text */
+      --theme-accent-orange: #FF7A00; /* Vibrant orange */
+      --theme-accent-orange-hover: #E66F00; /* Darker orange for hover */
+      --theme-border-primary: #3A3A3A; /* Dark gray for borders */
+      --theme-border-secondary: #2D2D2D; /* Even darker for subtle borders */
+      --theme-success-green: #10B981; /* For success states */
+      --theme-error-red: #EF4444; /* For error states */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--theme-bg-primary);
+      color: var(--theme-text-primary);
+      overscroll-behavior: none;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--theme-bg-secondary);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4A4D52; /* Kept original for now, can theme later */
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5A5D62;
+    }
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #4A4D52 var(--theme-bg-secondary);
+    }
+    *:focus-visible {
+        outline: 2px solid var(--theme-accent-orange) !important;
+        outline-offset: 1px !important;
+    }
+    /* Tailwind JIT configuration (conceptual) */
+    /* This would be in tailwind.config.js if we could edit it */
+    /*
+    module.exports = {
+      theme: {
+        extend: {
+          colors: {
+            'theme-primary': 'var(--theme-bg-primary)',
+            'theme-secondary': 'var(--theme-bg-secondary)',
+            'theme-tertiary': 'var(--theme-bg-tertiary)',
+            'text-primary': 'var(--theme-text-primary)',
+            'text-secondary': 'var(--theme-text-secondary)',
+            'text-tertiary': 'var(--theme-text-tertiary)',
+            'accent-orange': 'var(--theme-accent-orange)',
+            'accent-orange-hover': 'var(--theme-accent-orange-hover)',
+            'border-primary': 'var(--theme-border-primary)',
+            'border-secondary': 'var(--theme-border-secondary)',
+            'success-green': 'var(--theme-success-green)',
+            'error-red': 'var(--theme-error-red)',
+          }
+        }
+      }
+    }
+    */
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/jsx-runtime": "https://esm.sh/react@^19.1.0/jsx-runtime",
+    "react/jsx-dev-runtime": "https://esm.sh/react@^19.1.0/jsx-dev-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@^1.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.522.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-markdown@9": "https://esm.sh/react-markdown@9?deps=react@19",
+    "remark-gfm@4": "https://esm.sh/remark-gfm@4",
+    "uuid": "https://esm.sh/uuid@9.0.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body style="background-color: var(--theme-bg-primary); color: var(--theme-text-primary);">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
